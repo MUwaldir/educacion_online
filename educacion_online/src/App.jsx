@@ -30,7 +30,7 @@ function App() {
   return (
     <>
       <Router>
-        <div className="flex flex-col min-h-screen  bg-blue-500">
+        <div className="flex flex-col min-h-screen "style={{backgroundColor : '#fff6ed'}}>
 
         <Navbar />
         

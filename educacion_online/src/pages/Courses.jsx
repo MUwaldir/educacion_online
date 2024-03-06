@@ -13,7 +13,7 @@ const Courses = ({ courses }) => {
   const filteredCourses = courses.filter(filterCoursesByName);
 
   return (
-    <div className="container mx-auto py-8 bg-blue-500">
+    <div className="container mx-auto py-8 " style={{backgroundColor : '#fff6ed'}}>
       <h2 className="text-3xl font-bold mb-4">Todos los Cursos</h2>
       {/* Input de búsqueda */}
       <div className="mb-4 mx-2 md:w-1/2">

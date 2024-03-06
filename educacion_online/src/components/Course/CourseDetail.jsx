@@ -46,6 +46,20 @@ const CourseDetail = () => {
           duration: "2 horas",
           videoUrl: "https://www.youtube.com/watch?v=9XV9OSnF8gU", // Agrega la URL del video para la lección 1
         },
+        {
+          id: 5,
+          title: "Lección 5 de Matemáticas",
+          content: "Contenido de la lección 2 de Matemáticas",
+          duration: "1.5 horas",
+          videoUrl: "https://www.youtube.com/watch?v=ATHRCTVBI2M", // Agrega la URL del video para la lección 2
+        },
+        {
+          id: 6,
+          title: "Lección 6 de Matemáticas",
+          content: "Contenido de la lección 1 de Matemáticas",
+          duration: "2 horas",
+          videoUrl: "https://www.youtube.com/watch?v=9XV9OSnF8gU", // Agrega la URL del video para la lección 1
+        },
         // Otras lecciones...
       ],
     },
@@ -320,10 +334,10 @@ const CourseDetail = () => {
 
     <div className="flex flex-grow mt-4">
       {/* Barra lateral fija */}
-      <div className="w-64 top-16 fixed left-0 z-50 overflow-y-auto  bg-blue-500 text-white ">
+      <div className="w-64 top-20 fixed left-0 z-50    text-black " style={{backgroundColor : '#fff6ed'}}>
         <div className="p-2">
           <h2 className="text-2xl font-bold mb-4">{course.title}</h2>
-          <p className="text-gray-200 mb-4 text-justify">
+          <p className="text-black mb-4 text-justify">
             {course.description}
           </p>
           <h3 className="text-xl font-semibold mb-2">Clases</h3>
@@ -332,7 +346,7 @@ const CourseDetail = () => {
       </div>
 
       {/* Contenido principal con scroll */}
-      <div className="flex-grow ml-64 overflow-y-auto p-8">
+      <div className="flex-grow ml-64 overflow-y-auto pt-8">
          <LessonDetail2 lesson={lesson} openLesson={openLesson} />
       </div>
     </div>

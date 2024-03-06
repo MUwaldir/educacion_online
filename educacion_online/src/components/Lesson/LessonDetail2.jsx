@@ -75,25 +75,25 @@ const LessonDetail2 = ({ lesson, openLesson }) => {
   console.log(lesson)
 
   return (
-    <div className="lesson-detail-container p-6 bg-sky-200">
+    <div className="lesson-detail-container p-6  text-black border-l-2 border-blue-400" style={{backgroundColor : '#fff6ed'}}>
       <h1 className="text-3xl font-bold mb-4">{lesson.title}</h1>
       <p>Duración: {lesson.duration}</p>
 
       <div className="lesson-content mt-4">
         <h2 className="text-2xl font-bold mb-2">Introducción</h2>
-        <p className="text-gray-700 mb-4">{lesson.content.introduction}</p>
+        <p className="text-black mb-4">{lesson.content.introduction}</p>
 
         <h2 className="text-2xl font-bold mb-2">
           {lesson.content.definition.title}
         </h2>
-        <p className="text-gray-700 mb-4">
+        <p className="text-black mb-4">
           {lesson.content.definition.description}
         </p>
 
         <h2 className="text-2xl font-bold mb-2">
           {lesson.content.variablesAndConstants.title}
         </h2>
-        <p className="text-gray-700 mb-4">
+        <p className="text-black mb-4">
           {lesson.content.variablesAndConstants.description}
         </p>
 
@@ -108,7 +108,7 @@ const LessonDetail2 = ({ lesson, openLesson }) => {
                 alt={image.description}
                 className="w-full rounded-lg"
               />
-              <p className="text-gray-700 mt-2 p-2">{image.description}</p>
+              <p className="text-black mt-2 p-2">{image.description}</p>
             </div>
           ))}
         </div>
