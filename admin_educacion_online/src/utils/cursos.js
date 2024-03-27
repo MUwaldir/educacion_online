@@ -1,0 +1,109 @@
+export const cursos = [
+    {
+      titulo: "Introducción a la Programación Web",
+      descripcion: "Aprende los fundamentos de la programación web",
+      duracion: 20,
+      nivel: "Básico",
+      categoria: "Desarrollo Web",
+      requisitos: "No se requieren conocimientos previos",
+      objetivos: "Comprender los conceptos básicos de HTML, CSS y JavaScript",
+      image: "https://source.unsplash.com/featured/?economics",
+      costo: 29.99,
+      lessons: [
+        {
+          titulo: "Módulo 1: Introducción a HTML",
+          contenido:
+            "Aprenderás los fundamentos de HTML y cómo crear la estructura básica de una página web.",
+          duracion: 30,
+          recursos: ["Presentación en PDF", "Ejercicios prácticos"],
+          videoid: "vOSCevaytLA",
+          order: 1,
+          courseId:1
+        },
+        {
+          titulo: "Módulo 2: Fundamentos de CSS",
+          contenido:
+            "Descubrirás cómo dar estilo a tus páginas web utilizando CSS para controlar el diseño y la presentación.",
+          duracion: 40,
+          recursos: ["Vídeos explicativos", "Ejemplos de código"],
+          videoid: "vOSCevaytLA",
+          order: 2,
+          courseId:1
+        },
+        {
+          titulo: "Módulo 3: Introducción a JavaScript",
+          contenido:
+            "Explorarás los conceptos básicos de JavaScript y cómo agregar interactividad a tus sitios web.",
+          duracion: 50,
+          recursos: ["Lecciones interactivas", "Proyectos prácticos"],
+          videoid: "vOSCevaytLA",
+          order: 3,
+          courseId:1
+        },
+        {
+          titulo: "Módulo 4: Proyecto Final",
+          contenido:
+            "Aplicarás los conocimientos adquiridos en un proyecto final donde crearás tu propio sitio web.",
+          duracion: 60,
+          recursos: ["Tutoriales guiados", "Soporte del instructor"],
+          videoid: "vOSCevaytLA",
+          order: 4,
+          courseId:1
+        },
+      ],
+    },
+    {
+      titulo: "Desarrollo de Aplicaciones Móviles con React Native",
+      descripcion:
+        "Aprende a crear aplicaciones móviles multiplataforma con React Native",
+      duracion: 30,
+      nivel: "Intermedio",
+      categoria: "Desarrollo de Aplicaciones",
+      requisitos: "Conocimientos básicos de JavaScript",
+      objetivos: "Dominar la creación de aplicaciones móviles con React Native",
+      image: "https://source.unsplash.com/featured/?language",
+      costo: 49.99,
+      lessons: [
+        {
+          titulo: "Módulo 1: Introducción a React Native",
+          contenido:
+            "Aprenderás los conceptos básicos de React Native y cómo configurar tu entorno de desarrollo.",
+          duracion: 40,
+          recursos: ["Guía de instalación", "Ejemplos prácticos"],
+          videoid: "vOSCevaytLA",
+          order: 1,
+          courseId:2
+        },
+        {
+          titulo: "Módulo 2: Componentes y Navegación",
+          contenido:
+            "Explorarás la creación de componentes y cómo gestionar la navegación en tu aplicación.",
+          duracion: 50,
+          recursos: ["Documentación oficial", "Ejercicios de práctica"],
+          videoid: "vOSCevaytLA",
+          order: 2,
+          courseId:2
+        },
+        {
+          titulo: "Módulo 3: Gestión de Estado con Redux",
+          contenido:
+            "Aprenderás a manejar el estado de la aplicación utilizando Redux y acciones asíncronas.",
+          duracion: 60,
+          recursos: ["Tutoriales en vídeo", "Proyectos de ejemplo"],
+          videoid: "vOSCevaytLA",
+          order: 3,
+          courseId:2
+        },
+        {
+          titulo: "Módulo 4: Despliegue y Publicación",
+          contenido:
+            "Descubrirás cómo compilar tu aplicación y desplegarla en las tiendas de aplicaciones.",
+          duracion: 70,
+          recursos: ["Pasos detallados", "Consejos de publicación"],
+          videoid: "vOSCevaytLA",
+          order: 4,
+          courseId:2
+        },
+      ],
+    },
+  ];
