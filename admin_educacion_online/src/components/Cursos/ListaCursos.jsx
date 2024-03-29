@@ -1,11 +1,14 @@
 import React, { useState } from "react";
 import CursosAcciones from "./CursoAccion";
-import { cursos } from "../../utils/cursos";
+import { useDispatch, useSelector } from "react-redux";
+import { seleccionCurso } from "../../redux/actions/actions";
+// import { cursos } from "../../utils/cursos";
 
-const ListaCursos = ({setSelectedCurso}) => {
-
-  const handleCursoSelection = (curso) => {
-    setSelectedCurso(curso);
+const ListaCursos = () => {
+  const dispatch = useDispatch();
+  const cursos = useSelector((state) => state.cursos);
+  const handleCursoSelection = (id) => {
+    dispatch(seleccionCurso(id));
   };
 
   return (
@@ -19,15 +22,14 @@ const ListaCursos = ({setSelectedCurso}) => {
             <th className="px-4 py-2 border border-gray-300">Duración</th>
             <th className="px-4 py-2 border border-gray-300">Nivel</th>
             <th className="px-4 py-2 border border-gray-300">Categoría</th>
-           
           </tr>
         </thead>
         <tbody>
-          {cursos.map((curso, index) => (
+          {cursos.length > 0 && cursos.map((curso, index) => (
             <tr key={index} className="hover:bg-gray-100 cursor-pointer">
               <td
                 className="px-4 py-2 border border-gray-300"
-                onClick={() => handleCursoSelection(curso)}
+                onClick={() => handleCursoSelection(curso.id)}
               >
                 {curso.titulo}
               </td>
@@ -43,12 +45,10 @@ const ListaCursos = ({setSelectedCurso}) => {
               <td className="px-4 py-2 border border-gray-300">
                 {curso.categoria}
               </td>
-            
             </tr>
           ))}
         </tbody>
       </table>
-    
     </div>
   );
 };

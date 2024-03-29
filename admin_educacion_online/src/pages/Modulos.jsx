@@ -10,20 +10,22 @@ import {
 import ModulosList from "../components/Modulos/ModulosList";
 import CrearModuloButton from "../components/Modulos/CrearModuloButton";
 import ModuloForm from "../components/Modulos/ModuloForm";
-import { cursos } from "../utils/cursos";
+// import { cursos } from "../utils/cursos";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 const Modulos = () => {
   const [selectedCurso, setSelectedCurso] = useState(null);
   const [selectedModulo, setSelectedModulo] = useState(null);
-
-
   const [modulos, setModulos] = useState([]);
+  const cursos = useSelector((state) => state.cursos)
+
+
 
   const handleSelectCurso = (curso) => {
     setSelectedCurso(curso);
     setSelectedModulo(null); // Limpiar el módulo seleccionado al cambiar de curso
-    setModulos(curso.lessons);
+    setModulos(curso.Lessons);
   };
 
   const handleSelectModulo = (modulo) => {
@@ -37,7 +39,7 @@ const Modulos = () => {
   const handleCreateModulo = (nuevoModulo) => {
     // Lógica para crear un nuevo módulo
   };
-
+console.log(cursos)
 
   return (
     <div className="flex overflow-hidden">
@@ -71,13 +73,13 @@ const Modulos = () => {
             </ul>
           </div>
         ) : (
-          <div>
+          <div className=" h-full overflow-y-auto pb-10">
             <ul>
               {cursos.map((curso, i) => (
                 <li
                   key={i}
                   onClick={() => handleSelectCurso(curso)}
-                  className={`text-blue-500 rounded-md h-14 px-1 cursor-pointer hover:text-blue-600 mb-2 flex items-center ${
+                  className={`text-blue-500 rounded-md h-14 px-1 cursor-pointer hover:text-blue-600 hover:bg-blue-300 mb-2 flex items-center ${
                     selectedCurso === curso
                       ? "bg-blue-100 text-blue-600 font-bold rounded-lg px-2 py-1"
                       : ""

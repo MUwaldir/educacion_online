@@ -4,7 +4,7 @@ import ModuloForm from "./ModuloForm";
 
 const ModulosList = ({ modulos, onSelectModulo }) => {
   const [crearModulo, setCrearModulo] = useState(false);
-  const courseId = modulos.length > 0 ? modulos[0].courseId : 0;
+
 
   const handleCrearModulo = () => {
     setCrearModulo(!crearModulo);
@@ -13,7 +13,7 @@ const ModulosList = ({ modulos, onSelectModulo }) => {
     setCrearModulo(false)
   },[modulos])
   console.log(modulos)
-  console.log(courseId)
+
 
   return (
     <div className="bg-white rounded shadow p-6">
