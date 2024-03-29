@@ -45,7 +45,7 @@ const createCourse = async (req, res) => {
           recursos,
           videoid,
           order,
-          courseId: nuevoCurso.id, // Asociar la lección con el curso recién creado
+          courseId: nuevoCurso.id, 
         });
       })
     );
