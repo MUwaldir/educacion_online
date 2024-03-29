@@ -1,19 +1,21 @@
 import React, { useState } from 'react';
 import CourseList from '../components/Course/CourseList';
+import { useSelector } from 'react-redux';
 
-const Courses = ({ courses }) => {
+const Courses = () => {
+  const courses = useSelector((state) => state.cursos)
   const [searchTerm, setSearchTerm] = useState('');
 
   // Función para filtrar los cursos por nombre
   const filterCoursesByName = (course) => {
-    return course.title.toLowerCase().includes(searchTerm.toLowerCase());
+    return course.titulo.toLowerCase().includes(searchTerm.toLowerCase());
   };
 
   // Filtrar los cursos por nombre
   const filteredCourses = courses.filter(filterCoursesByName);
 
   return (
-    <div className="container mx-auto py-8 " style={{backgroundColor : '#fff6ed'}}>
+    <div className="flex-grow mx-auto py-8 " style={{backgroundColor : '#fff6ed'}}>
       <h2 className="text-3xl font-bold mb-4">Todos los Cursos</h2>
       {/* Input de búsqueda */}
       <div className="mb-4 mx-2 md:w-1/2">
